@@ -46,9 +46,9 @@ var taskInfoEl = document.createElement("div");
     "</span>";
   listItemEl.appendChild(taskInfoEl);
 
-var taskActionsEl = createTaskActions(taskIdCounter);
-  console.log(taskActionsEl);
-
+  var taskActionsEl = createTaskActions(taskIdCounter);
+  listItemEl.appendChild(taskActionsEl);
+  
   tasksToDoEl.appendChild(listItemEl);
 
   // increase task counter for next unique id
