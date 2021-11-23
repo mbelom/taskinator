@@ -51,9 +51,6 @@ var createTaskEl = function (taskDataObj) {
   // add task id as a custom attribute
   listItemEl.setAttribute("data-task-id", taskIdCounter);
 
-  //ensure that the new property gets to the function via the taskDataObj parameter set up
-  console.log(taskDataObj);
-  console.log(taskDataObj.status);
 
   var taskInfoEl = document.createElement("div");
   taskInfoEl.className = "task-info";
@@ -193,7 +190,6 @@ var taskStatusChangeHandler = function (event) {
     if (tasks[i].id === parseInt(taskId)) {
       tasks[i].status = statusValue;
     }
-    console.log(tasks);
   }
 
   if (statusValue === "to do") {
